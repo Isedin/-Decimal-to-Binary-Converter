@@ -109,3 +109,14 @@ if (input === 0) {
 		return decimalToBinary(Math.floor(input / 2)) + (input % 2);
 	}
 	it was changed to a single if checking if input is equal to 0 or 1. If it is, use the String() function to convert input into a string and return it.
+-------------------------------------------------------------
+setTimeout(() => {
+		console.log("free");
+	}, 500);
+	setTimeout(() => {
+		console.log("Code");
+	}, 1000);
+	setTimeout(() => {
+		console.log("Camp");
+	}, 1500);
+it was just for sample inside the showAnimation function.
