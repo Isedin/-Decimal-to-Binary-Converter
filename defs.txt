@@ -1,0 +1,18 @@
+Sta je zapravo Stack
+U računarstvu, stek je struktura podataka u kojoj se stavke čuvaju na LIFO (last-in-first-out) način. Ako zamislite hrpu knjiga, posljednja knjiga koju dodate u hrpu je prva knjiga koju možete skinuti sa steka. Ili niz gdje možete samo .push() i .pop() elemente.
+
+Call stack je skup poziva funkcija pohranjenih u strukturi steka. Kada pozovete funkciju, ona se dodaje na vrh steka, a kada se vrati, ona se uklanja sa vrha/kraja steka.
+
+Ovo ćete videti u akciji kreiranjem lažnog poziva stack-a.
+------------------------------------------------------------
+
+Rekurzivna funkcija
+Rekurzivna funkcija je funkcija koja poziva sebe iznova i iznova. Ali morate biti oprezni jer lako možete stvoriti beskonačnu petlju. Tu nastupa osnovni slučaj. Osnovni slučaj je kada funkcija prestane sama da se zove, a dobra je ideja da je prvo napišete.
+Rekurzivne funkcije također imaju rekurzivni slučaj, gdje funkcija poziva samu sebe.
+Kada pišete rekurzivni slučaj, morate zapamtiti dvije stvari:
+
+1.Šta je osnovni slučaj?
+2.Koliki je najmanji posao koji treba da uradite da biste se približili osnovnom slučaju?
+Pošto je osnovni slučaj kada je broj jednak 0, potrebno je ponovo pozvati odbrojavanje() dok istovremeno snižavate vrednost broja za 1.
+
+Unutar drugog bloka, pozovite odbrojavanje() i proslijedite ga broj - 1 kao argument.

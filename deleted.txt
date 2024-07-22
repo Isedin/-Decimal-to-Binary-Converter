@@ -1,0 +1,111 @@
+Here is all content from decimalToBinary function that we have deleted:
+// In your decimalToBinary function, use the return keyword to return a string of the binary number representation of true.
+	// return "1";
+	// In your decimalToBinary function, convert the number 10 into binary and return it as a string.
+	// return "1010";
+	// In your decimalToBinary function, convert the number 118 into binary with leading zeros and return it as a string.
+	// return "01110110";
+	const inputs = [];
+	const quotients = [];
+	const remainders = [];
+
+	if (input === 0) {
+		// Within the body of the if statement, set the innerText property of result equal to the string "0". Then, use an early return statement to break out of the function early.
+		result.innerText = "0";
+	}
+
+	while (input > 0) {
+		// Use the Math.floor() function to round down the quotient of input divided by 2 before it's assigned to quotient.
+		// Math.floor() function returns the largest integer less than or equal to a given number.
+		const quotient = Math.floor(input / 2);
+		// Inside your while loop, create a variable named remainder and use the remainder operator to assign it the remainder of input divided by 2.
+		const remainder = input % 2;
+		// Inside your while loop, use the .push() method to append input to the inputs array.
+		inputs.push(input);
+		// Use .push() to append the quotient variable to the quotients array. Also, append the remainder variable to the remainders array.
+		quotients.push(quotient);
+		remainders.push(remainder);
+		input = quotient;
+	}
+	// Log the text "Inputs: ", followed by a comma, followed by the inputs array to the console.
+	console.log("Inputs: ", inputs);
+	// Log the text "Quotients: ", followed by a comma, followed by the quotients array to the console.
+	console.log("Quotients: ", quotients);
+	// Log the text "Remainders: ", followed by a comma, followed by the remainders array to the console.
+	console.log("Remainders: ", remainders);
+	// Use the .reverse() method to reverse the order of the remainders array, and .join() with an empty string as a separator to join the elements into a binary number string. Then, set result.innerText equal to the binary number string.
+	result.innerText = remainders.reverse().join("");
+
+    --------------------------------------------------------------------------------------------
+    const callStack = [
+	// In your callStack array, add the following string: "a(): returns 'freeCodeCamp ' + b()". This represents the function call and the code that will be executed.
+	`$a(): returns 'freeCodeCamp ' + b()`,
+	// drugacije napisano bi bilo ovako:
+	// `a(): returns 'freeCodeCamp ' + b()`, ili ovako:
+	// "a(): returns 'freeCodeCamp ' + b()"
+	// Next, add the following string to your callStack array: "b(): returns 'is ' + c()"
+	`b(): returns 'is ' + c()`,
+	// Add the following string to your callStack array: "c(): returns 'awesome!'"
+	`c(): returns 'awesome!'`,
+];
+const a = () => {
+	return "freeCodeCamp " + b();
+};
+const b = () => {
+	return "is " + c();
+};
+const c = () => {
+	return "awesome!";
+};
+
+---------------------------------------------------------------------
+Exercise to understand the recursive function
+const countDownAndUp = (number) => {
+	console.log(number);
+	if (number === 0) {
+		console.log("Reached base case");
+		// 		Since the base case is when number is equal to 0, you need to call countdown() again while also lowering the value of number by 1.
+		// Inside the else block, call countdown() and pass it number - 1 as an argument.
+		return;
+	} else {
+		countDownAndUp(number - 1);
+		console.log(number);
+	}
+};
+countDownAndUp(5);
+// Now you should see a countdown from 3 to 0, followed by Reached base case, and a count from 1 to 3. This is because, after the recursive loop is finished, the function will continue to execute the code after the recursive call. This is why you see Reached base case before the count from 1 to 3.
+
+------------------------------------------------------------
+This the function that has first been coded with while loop and than replaced with recursion:
+const decimalToBinary = (input) => {
+	let binary = "";
+	// Create an if statement that checks if input is equal to 0. If it is, set binary equal to the string "0".
+	if (input === 0) {
+		binary = "0";
+	}
+	// Create a while loop that runs as long as input is greater than 0. Inside the loop, assign 0 to input for now.
+	while (input > 0) {
+		// use the remainder operator (%) to set binary equal to the remainder of input divided by 2.
+		// Then, use the addition operator to add the current value of binary to the end of the equation input % 2. This is what will build the binary string from right to left.
+		binary = (input % 2) + binary;
+		// Inside your while loop, set input equal to the quotient of input divided by 2. Also, remember to use Math.floor() to round the quotient down.
+		input = Math.floor(input / 2); // Note: Be careful not to trigger the decimalToBinary function before you set input equal to 0 inside the loop. Otherwise, you could cause an infinite loop.
+	}
+	result.innerText = binary;
+};
+
+-------------------------------------------------------------
+// const quotient = 5 / 2; // 2.5
+// In the example above,
+// 5 is the dividend, or the number to be divided,
+// and 2 is the divisor, or the number to divide by.
+// The result, 2.5, is called the quotient.
+----------------------------------------------------------
+if (input === 0) {
+		return "0";
+	} else if (input === 1) {
+		return "1";
+	} else {
+		return decimalToBinary(Math.floor(input / 2)) + (input % 2);
+	}
+	it was changed to a single if checking if input is equal to 0 or 1. If it is, use the String() function to convert input into a string and return it.
