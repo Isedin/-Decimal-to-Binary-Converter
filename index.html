@@ -1,27 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Decimal to Binary Converter</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <h1>Decimal to Binary Converter</h1>
-    <div class="input-container">
-      <label for="number-input">Enter a decimal number:</label>
-      <input
-        value=""
-        type="number"
-        name="decimal number input"
-        id="number-input"
-        class="number-input"
-      />
-      <button class="convert-btn" id="convert-btn">Convert</button>
-    </div>
-    <output id="result" for="number-input"></output>
-    <div id="animation-container"></div>
-    <script src="script.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Number System Converter</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<h1>Number System Converter</h1>
+		<div class="input-container">
+			<label for="number-input">Enter number:</label>
+			<input
+				value=""
+				type="number"
+				name="number input"
+				id="number-input"
+				class="number-input"
+			/>
+
+			<select id="from-system" class="select-input">
+				<option value="decimal">Decimal</option>
+				<option value="binary">Binary</option>
+				<option value="hexadecimal">Hexadecimal</option>
+			</select>
+
+			<button class="convert-btn" id="convert-btn">Convert</button>
+		</div>
+
+		<h2>Results:</h2>
+		<div id="results">
+			<div class="result-item">
+				<p class="label">Decimal:</p>
+				<p class="output" id="result-decimal"></p>
+			</div>
+			<div class="result-item">
+				<p class="label">Binary:</p>
+				<p class="output" id="result-binary"></p>
+			</div>
+			<div class="result-item">
+				<p class="label">Hexadecimal:</p>
+				<p class="output" id="result-hexadecimal"></p>
+			</div>
+		</div>
+
+		<!-- <output id="result" for="number-input"></output>
+		<div id="animation-container"></div> -->
+
+		<script src="script.js"></script>
+	</body>
 </html>
